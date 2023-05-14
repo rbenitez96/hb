@@ -10,11 +10,24 @@
         <div class="container mt-4">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2>Cronómetro</h2>
-                            <p>El tiempo que falta para tu cumpleaños es:</p>
-                            <div id="countdown"></div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2>Cronómetro</h2>
+                                <p>El tiempo que falta para tu cumpleaños es:</p>
+                                <div id="countdown"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card mt-4" id="cuadro-pistas" style="display:none">
+                            <div class="card-body text-center">
+                                <div class="embed-responsive embed-responsive-16by9" id="cuadro1" style="display:none">
+                                    <video width="320" height="240" controls>
+                                      <source src="src/edcm.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -23,7 +36,9 @@
                         <div class="card-body">
                             <h2>Pistas</h2>
                             <ul id="pistas">
-                                <li><button id="pista1" class="btn btn-outline-secondary" disabled>Pista 1</button></li>
+                                <li>
+                                    <button id="pista1" class="btn btn-outline-secondary" disabled>Pista 1</button>
+                                </li>
                                 <li><button id="pista2" class="btn btn-outline-secondary" disabled>Pista 2</button></li>
                                 <li><button id="pista3" class="btn btn-outline-secondary" disabled>Pista 3</button></li>
                             </ul>
