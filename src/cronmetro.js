@@ -20,7 +20,7 @@ function countdown() {
     if (days <= 15) {
         document.getElementById('pista1').disabled = false;
     }
-    if (days <= 5) {
+    if (days <= 10) {
         document.getElementById('pista2').disabled = false;
     }
     if (days <= 1) {
@@ -36,24 +36,43 @@ function mostrarCuadroPistas(){
     document.getElementById('cuadro-pistas').style.display = 'flex';
 }
 
+
 function ocultarVideo() {
     // Ocultar el contenedor del video
     document.getElementById('cuadro1').style.display = 'none';
-    video.stop();
+    video.stop;
+}
+
+function ocultarcuadro1(){
+    ocultarVideo();
     ocultarCuadroPistas();
 }
 
+function ocultarLibro(){
+    document.getElementById('cuadro2').style.display = 'none';
+}
 
 // Función para desbloquear el cuadro de video
 function desbloquearVideo() {
+    ocultarLibro();
     mostrarCuadroPistas();
     document.getElementById('cuadro1').style.display = 'block';
     document.getElementById('pista1').disabled = true;
     video.play();
-    video.addEventListener('ended', ocultarVideo);
+    video.addEventListener('ended', ocultarcuadro1);
 }
 
+function desbloquearLibro() {
+    ocultarVideo();
+    mostrarCuadroPistas();
+    document.getElementById('cuadro2').style.display = 'block';
+    document.getElementById('pista2').disabled = true;
+}
+
+
+
 document.getElementById('pista1').addEventListener('click', desbloquearVideo);
+document.getElementById('pista2').addEventListener('click', desbloquearLibro);
 
 // Actualiza el cronómetro cada segundo
 setInterval(countdown, 1000);

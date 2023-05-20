@@ -1,54 +1,64 @@
 /* Estilos para la imagen de cabecera */
 #header {
-    background-color: #2F4F4F;
-    padding: 20px;
-    text-align: center;
-  }
-  #header img {
-    width: 100px;
-    height: 100px;
-  }
-  
-  /* Estilos para los cuadros de texto */
-  .textbox {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 24px;
-    margin: 10px;
-  }
-  
-  /* Estilos para el botón de desbloquear */
-  #unlock-button {
-    display: block;
-    width: 150px;
-    height: 40px;
-    background-color: #2F4F4F;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 20px auto;
-    cursor: pointer;
-  }
-  
-  /* Estilos para el mensaje de alerta */
-  .alert {
-    display: none;
-    width: 200px;
-    height: 100px;
-    background-color: #F44336;
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 5px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    padding: 20px;
-  }
-  
+  background-color: #2f4f4f;
+  padding: 20px;
+  text-align: center;
+}
+#header img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Estilos para los cuadros de texto */
+.textbox {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+  margin: 10px;
+}
+
+/* Estilos para el botón de desbloquear */
+#unlock-button {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background-color: #2f4f4f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+/* Estilos para el mensaje de alerta */
+.alert {
+  display: none;
+  width: 200px;
+  height: 100px;
+  background-color: #f44336;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 20px;
+}
+
+.iframe-container {
+  width: 100%;
+  max-width: 480px; /* maximo tamaño de ancho */
+  height: auto; /* altura dinámica */
+  max-height: 300px; /* maxima altura */
+}
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+}
