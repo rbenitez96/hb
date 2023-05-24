@@ -1,6 +1,7 @@
 // Define la fecha del cumpleaños (YYYY-MM-DD)
 const birthday = '2023-05-31';
 const video = document.querySelector('#cuadro1 video');
+const video2 = document.querySelector('#cuadro3 video');
 
 // Calcula el tiempo restante para el cumpleaños
 function countdown() {
@@ -55,6 +56,7 @@ function ocultarLibro(){
 // Función para desbloquear el cuadro de video
 function desbloquearVideo() {
     ocultarLibro();
+    ocultarVideo3();
     mostrarCuadroPistas();
     document.getElementById('cuadro1').style.display = 'block';
     document.getElementById('pista1').disabled = true;
@@ -64,15 +66,37 @@ function desbloquearVideo() {
 
 function desbloquearLibro() {
     ocultarVideo();
+    ocultarVideo3();
     mostrarCuadroPistas();
     document.getElementById('cuadro2').style.display = 'block';
     document.getElementById('pista2').disabled = true;
 }
 
+function ocultarVideo3() {
+    // Ocultar el contenedor del video
+    document.getElementById('cuadro3').style.display = 'none';
+    video2.stop;
+}
+
+function ocultarcuadro3(){
+    ocultarVideo3();
+    ocultarCuadroPistas();
+}
+
+function desbloquearVideoPista3() {
+    ocultarVideo();
+    ocultarLibro();
+    mostrarCuadroPistas();
+    document.getElementById('cuadro3').style.display = 'block';
+    document.getElementById('pista3').disabled = true;
+    video2.play();
+    video2.addEventListener('ended', ocultarcuadro3);
+}
 
 
 document.getElementById('pista1').addEventListener('click', desbloquearVideo);
 document.getElementById('pista2').addEventListener('click', desbloquearLibro);
+document.getElementById('pista3').addEventListener('click', desbloquearVideoPista3);
 
 // Actualiza el cronómetro cada segundo
 setInterval(countdown, 1000);
