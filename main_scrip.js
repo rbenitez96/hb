@@ -1,7 +1,7 @@
 // Función para verificar si la fecha ingresada es correcta
 function verificarFecha() {
     try{
-        let aniversario = new Date('10/09/2020');
+        let aniversario = new Date('10/08/2020');
         let fecha = '';
         for (let i = 1; i <= 8; i++) {
             console.log(document.getElementById(`cuadro${i}`).value)
